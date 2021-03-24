@@ -6,6 +6,9 @@ import { HomeComponent } from './home/home.component';
 import { FirebaseService } from './services/firebase.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +25,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
       appId: '1:256709267053:web:4c94c879b54c5253777964',
       measurementId: 'G-XDJJ1EHMVW'
     }),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [FirebaseService],
   bootstrap: [AppComponent]
