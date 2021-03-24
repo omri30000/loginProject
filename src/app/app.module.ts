@@ -1,7 +1,6 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {AngularFireModule} from '@angular/fire';
-import { AppRoutingModule } from './app-routing.module';
+import { NgModule } from '@angular/core';
+import {AngularFireModule} from '@angular/fire'
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { FirebaseService } from './services/firebase.service';
@@ -13,7 +12,6 @@ import { FirebaseService } from './services/firebase.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     AngularFireModule.initializeApp({
       apiKey: "AIzaSyAKdcjgoYN6Ye822cIKZpnlluJGzqRJspk",
       authDomain: "loginproject-5caee.firebaseapp.com",

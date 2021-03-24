@@ -29,13 +29,12 @@ export class AppComponent {
   }
 
   async onSignin(email: string, password: string) {
-    await this.firebaseService.signup(email,password)
+    await this.firebaseService.signin(email,password)
     if(this.firebaseService.isLoggedIn){
       this.isSignedIn=true
     }
   }
   handleLogout() {
     this.isSignedIn=false
-    
   }
 }
