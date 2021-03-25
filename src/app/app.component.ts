@@ -8,33 +8,34 @@ import { FirebaseService } from './services/firebase.service';
 })
 export class AppComponent {
   title = 'loginProject';
-
-  isSignedIn = false
+  mode = 'signup';
+  hide = true;
+  isSignedIn = false;
   constructor(public firebaseService: FirebaseService) { }
 
   ngOnInit() {
-    if(localStorage.getItem('user')!==null) {
-      this.isSignedIn=true
-    }
-    else{ 
-      this.isSignedIn=false
-    }
+    this.isSignedIn = localStorage.getItem('user') !== null;
   }
 
   async onSignup(email: string, password: string) {
-    await this.firebaseService.signup(email,password)
-    if(this.firebaseService.isLoggedIn){
-      this.isSignedIn=true
+    await this.firebaseService.signup(email, password);
+    if (this.firebaseService.isLoggedIn){
+      this.isSignedIn = true;
     }
   }
 
   async onSignin(email: string, password: string) {
-    await this.firebaseService.signin(email,password)
-    if(this.firebaseService.isLoggedIn){
-      this.isSignedIn=true
+    await this.firebaseService.signin(email, password);
+    if (this.firebaseService.isLoggedIn){
+      this.isSignedIn = true;
     }
   }
+
+  changeMode(current: string){
+      this.mode = current === 'signup' ? 'login' : 'signup';
+  }
+
   handleLogout() {
-    this.isSignedIn=false
+    this.isSignedIn = false;
   }
 }
