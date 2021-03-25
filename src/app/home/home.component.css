@@ -1,0 +1,23 @@
+h1{
+  color: blue;
+  font-weight:500;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+div {
+  white-space: pre-line;
+}
+
+mat-card {
+  max-width: 250px;
+  margin: 2em auto;
+  text-align: center;
+}
+
+mat-form-field {
+  display: block;
+}
