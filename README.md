@@ -1,6 +1,7 @@
 # LoginProject
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.5.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli).
+Developed by Omri Zaiman for Out4In company (Yooz project).
 
 ## Development server
 
